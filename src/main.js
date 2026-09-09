@@ -39,7 +39,11 @@ for (const event of events) {
 
   const availability = document.createElement('p')
   availability.className = 'availability'
-  availability.textContent = formatAvailability(event.capacity, event.attendees)
+  availability.textContent = formatAvailability(
+    event.capacity,
+    event.attendees,
+    event.date,
+  )
 
   card.append(title, date, availability)
   eventList.append(card)
